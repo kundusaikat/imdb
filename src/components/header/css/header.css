@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0%;
+  background-color: black;
+}
+input {
+  border: none;
+  background-color: white;
+}
+a {
+  background-color: black;
+}
+.logoYellow {
+  margin-top: 0.3%;
+  width: 60px;
+
+  height: 45px;
+}
+.menuLogo {
+  width: 8%;
+}
+.menuContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  column-gap: 4px;
+  text-decoration: none;
+  width: 70px;
+  height: 30px;
+  color: white;
+  padding-left: 3px;
+  padding-right: 1px;
+  border-radius: 4px;
+  transition: 0.2s;
+  margin-top: 18%;
+  margin-left: 15%;
+}
+
+.mainContainer {
+  margin: auto;
+  /* border: 1px solid green; */
+  /* height: ; */
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  justify-content: space-around;
+  position: relative;
+  max-width: 80%;
+}
+.search {
+  margin-top: 0.1%;
+  margin-left: 1%;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+  background-color: white;
+  border-radius: 4px;
+  width: 55%;
+  margin-top: 1%;
+}
+
+.searchIcon {
+  margin-left: 5%;
+  margin-top: 1.3%;
+  display: block;
+  background-color: white;
+}
+.searchOption {
+  display: grid;
+  text-align: center;
+  margin-top: 0.5%;
+  background-color: white;
+}
+#movie {
+  background-color: white;
+}
+#searchInput {
+  margin-left: 1%;
+  width: 90%;
+}
+#after {
+  display: none;
+}
+.imdbBlack,
+.WatchList {
+  background-color: black;
+  color: white;
+  width: 80px;
+  height: 30px;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  margin-top: 1%;
+  border-radius: 4px;
+}
+.imdbBlack p {
+  font-weight: bold;
+}
+#imdbBlack_option {
+  width: 40px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+.menuContainer:hover,
+.imdbBlack:hover,
+.imdbBlack p:hover {
+  background-color: rgb(65, 59, 59);
+}
+
+#after {
+  margin: 0;
+  padding: 1%;
+}
+
+.mainContainer_after {
+  display: none;
+}
+.mainContainer_after {
+  background-color: black;
+
+  /* padding-left: 4px;
+  padding-right: 4px; */
+}
+
+.left {
+  /* border: 1px solid white; */
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.right {
+  /* border: 1px solid white; */
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.select_after {
+  border: none;
+  font-weight: bold;
+}
+.p_after_container,
+.search_after_container {
+  display: grid;
+  text-align: center;
+  align-items: center;
+}
+.search_after {
+  margin-top: 10%;
+}
+.menu_container {
+  margin-top: 10%;
+}
+.debounce_table {
+  /* border: 1px solid white; */
+  position: relative;
+  z-index: 30px;
+  transition: 1s;
+  margin-left: 25.29%;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .mainContainer {
+    display: none;
+  }
+  .mainContainer_after {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+  }
+}
