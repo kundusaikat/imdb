@@ -43,7 +43,7 @@ export const HeadBar = ({ setToggle, image }) => {
         </div>
         <div className="search">
           <div className="searchOption">
-            <p id="movie">movies</p>
+            <p id="movie_header">movies</p>
           </div>
           <input
             type="text"
@@ -57,9 +57,11 @@ export const HeadBar = ({ setToggle, image }) => {
         <div className="imdbBlack">
           <p>ImdbPro</p>
         </div>
-        <div className="imdbBlack">
-          <p>Watchlist</p>
-        </div>
+        <a href="#wl" id="wl_a">
+          <div className="imdbBlack">
+            <p>Watchlist</p>
+          </div>
+        </a>
         <div className="imdbBlack">
           <p>Sign in</p>
         </div>
@@ -70,10 +72,13 @@ export const HeadBar = ({ setToggle, image }) => {
           </select>
         </div>
       </div>
+
       <table className="debounce_table">
-        {final.map((e) => (
-          <Debouns key={e.imdbID} e={e} />
-        ))}
+        <tbody>
+          {final.map((e) => (
+            <Debouns key={e.imdbID} e={e} />
+          ))}
+        </tbody>
       </table>
     </>
   );

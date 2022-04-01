@@ -49,7 +49,7 @@ export const Main = () => {
         <div className="subdiv toppicks">
           <h2 className="heading">From your Watchlist</h2>
           <p>Movies and TV shows that you have watchlisted</p>
-          <div className="flexContainer">
+          <div className="flexContainer" id="wl">
             {watchlistData.map((e) => (
               <div className="wrapper" key={e.title}>
                 <div className="imgContainer">
