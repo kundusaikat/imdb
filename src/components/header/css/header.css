@@ -157,6 +157,14 @@ a {
 .menu_container {
   margin-top: 10%;
 }
+.debounce_table {
+  /* border: 1px solid white; */
+  position: relative;
+  z-index: 30px;
+  transition: 1s;
+  margin-left: 25.29%;
+}
+
 
 @media only screen and (max-width: 600px) {
   .mainContainer {

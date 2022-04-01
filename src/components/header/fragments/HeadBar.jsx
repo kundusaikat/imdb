@@ -1,11 +1,27 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { Debouns } from "./debouncing";
 
 export const HeadBar = ({ setToggle, image }) => {
-  const [inData, setInData] = useState({});
   const [final, setFinal] = useState([]);
-  // https://omdbapi.com/?s=${inData}&apikey=fdcffdb4
- 
+  const getData = (text) => {
+    const { value } = text.target;
+    if (value.length > 0) {
+      axios
+        .get(`https://omdbapi.com/?s=${value}&apikey=fdcffdb4&type=movie`)
+        .then((res) => {
+          console.log(res.data);
+          if (res.data.Response === "False") {
+            console.log("hi");
+            setFinal([]);
+          } else {
+            setFinal(res.data.Search);
+          }
+        });
+    } else if (value.length === 0) {
+      setFinal([]);
+    }
+  };
   return (
     <>
       <div className="mainContainer">
@@ -23,14 +39,18 @@ export const HeadBar = ({ setToggle, image }) => {
             >
               <span></span> Menu
             </i>
-            {/* <p id="Menu">Menu</p> */}
           </a>
         </div>
         <div className="search">
           <div className="searchOption">
             <p id="movie">movies</p>
           </div>
-          <input type="text" placeholder="Search.." id="searchInput" />
+          <input
+            type="text"
+            placeholder="Search.."
+            id="searchInput"
+            onChange={(e) => getData(e)}
+          />
           <i className="fa-solid fa-magnifying-glass searchIcon"></i>
         </div>
 
@@ -46,19 +66,15 @@ export const HeadBar = ({ setToggle, image }) => {
         <div className="imdbBlack">
           <select name="" id="imdbBlack_option">
             <option value="">En</option>
-            <option value="">En</option>
-            <option value="">En</option>
-            <option value="">En</option>
-            <option value="">En</option>
-            <option value="">En</option>
+            <option value="">Hin</option>
           </select>
         </div>
       </div>
-     ` {/* <div style={{ color: "white" }}>
+      <table className="debounce_table">
         {final.map((e) => (
-          <div>{e.Title}</div>
+          <Debouns key={e.imdbID} e={e} />
         ))}
-      </div>` */}
+      </table>
     </>
   );
 };

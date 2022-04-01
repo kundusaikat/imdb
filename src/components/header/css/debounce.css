@@ -1,0 +1,31 @@
+.debounce_img img {
+  height: 80px;
+  width: 60px;
+}
+
+.debounce {
+  border: 1px solid white;
+}
+.debounce_img,
+.debounce_title {
+  border-bottom: 1px solid rgb(87, 79, 79);
+}
+.debounce_title p {
+  margin-left: 5px;
+}
+
+.debounce_button button {
+  background-color: rgb(200, 132, 15);
+  border: none;
+  width: 100px;
+  height: 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+.debounce_title p:hover {
+  text-decoration: underline;
+}
+.debounce_button button:hover {
+  background-color: rgb(97, 64, 8);
+}
