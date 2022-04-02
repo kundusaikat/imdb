@@ -1,5 +1,5 @@
 .main{
-    background-color: #222;
+    background-color: #000;
     color:white;
     text-align: left;
     width:70vw;
@@ -8,7 +8,7 @@
 
 .container{
     padding: 25px;
-    background-color: #111;
+    background-color: #000;
 }
 
 .container > h1{
@@ -26,12 +26,16 @@
 }
 
 .featuredToday{
-    width: 70%;
+    width: 100%;
 }
 
 .featuredToday>.flexContainer{
     display: flex;
+    flex-flow: row wrap;
 
+}
+.featuredToday>.flexContainer > .wrapper{
+    width: 30%;
 }
 
 .editor_flex{
@@ -133,4 +137,74 @@ img{
 
 .toppicks > .flexContainer >.wrapper > p{
     font-size: 1.3em;
+}
+
+.moreToWatch > button{
+    padding: 20px 100px;
+    margin: 10px;
+    color:white;
+    border:1px solid white;
+    font-size: 1.3rem;
+    box-sizing: border-box;
+}
+
+.streaming > ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+.streaming >ul> li:hover{
+    border-bottom: 1px solid yellow;
+    text-decoration: none;
+    
+}
+.streaming >ul> li:active{
+    border-bottom: 1px solid yellow;
+    text-decoration: none;
+    
+}
+.icons{
+    margin: auto;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.icons >a > *{
+    font-size: 2rem;
+    
+}
+.icons >a{
+    text-decoration: none;
+    color:white;
+    
+}
+
+ul.flex{
+    margin:auto;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+p.amazon{
+    width: 200px;
+    margin: auto ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+p.amazon > img{
+    height: 30px;
+    width: auto;
+}
+
+p.lastline {
+    text-align: center;
 }

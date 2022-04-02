@@ -175,3 +175,21 @@ export const topnewsData = [
     date: "Mar 30 The Wrap",
   },
 ];
+
+export const exclusive = [
+  {
+    imgUrl:
+      "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80",
+    title: "Pablo Scheiber and the 'halo' Cast answer Burning Questions",
+  },
+  {
+    imgUrl:
+      "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80",
+    title: "Why Jared Leto Faought Against Prosthetics for 'Morbius'",
+  },
+  {
+    imgUrl:
+      "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80",
+    title: "Chart the Rise of 'Morbius' Star Matt Smith",
+  },
+];
