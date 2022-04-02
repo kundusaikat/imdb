@@ -9,7 +9,6 @@ import { useState } from "react";
 
 export const Header = () => {
   const [toggle, setToggle] = useState(true);
-  // let arr = ["a", "you", "hi", "avanger"];
   return (
     <>
       <div className="before_container">

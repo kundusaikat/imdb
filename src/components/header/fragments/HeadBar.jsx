@@ -22,13 +22,14 @@ export const HeadBar = ({ setToggle, image }) => {
       setFinal([]);
     }
   };
+
   return (
     <>
       <div className="mainContainer">
         <img src={image} alt="" className="logoYellow" />
 
         <div className="menu">
-          <a href="" className="menuContainer">
+          <a href="/" className="menuContainer">
             <i
               className="fa-solid fa-bars"
               style={{ color: "white", background: "transparent" }}

@@ -1,10 +1,10 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 
-import image1 from "../images/1.jpg";
-import image2 from "../images/2.jpg";
-import image5 from "../images/5.jpg";
-export const Carouselcontainer = () => {
+import image1 from "../../images/1.jpg";
+import image2 from "../../images/2.jpg";
+import image5 from "../../images/5.jpg";
+export const CarouselContainer = () => {
   return (
     <Carousel>
       <Carousel.Item interval={2000}>

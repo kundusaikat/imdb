@@ -1,12 +1,12 @@
 import { Main } from "../main/Main";
 
 import { Header } from "../header/Header";
-import { Carouselcontainer } from "../Carouselcontainer";
+import { CarouselContainer } from "../CorouselContainer/CourouselContainer";
 export const Home = () => {
   return (
     <div>
       <Header />
-      <Carouselcontainer />
+      <CarouselContainer />
       <Main />
     </div>
   );

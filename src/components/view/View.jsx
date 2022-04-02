@@ -7,14 +7,14 @@ import "./view.css";
 export const View = () => {
   const [view, setView] = useState("");
   const { id } = useParams();
-  const [Id, setId] = useState(id);
+  const [Id1, setId1] = useState(id);
   useEffect(() => {
-    getView();
-  }, [Id]);
+    getView(Id1);
+  }, [Id1]);
 
-  function getView() {
+  function getView(Id1) {
     axios
-      .get(`https://omdbapi.com/?i=${Id}&apikey=fdcffdb4&type=movie&plot=full`)
+      .get(`https://omdbapi.com/?i=${Id1}&apikey=fdcffdb4&type=movie&plot=full`)
       .then(({ data }) => {
         setView(data);
       });

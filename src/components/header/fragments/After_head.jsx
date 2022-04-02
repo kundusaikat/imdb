@@ -2,13 +2,13 @@ export const After_head = () => {
   return (
     <div className="mainContainer_after">
       <div className="left">
-        <a href="" className="menu_container">
+        <a href="/" className="menu_container">
           <i
             className="fa-solid fa-bars menu_after"
             style={{ color: "white" }}
           />
         </a>
-        <a href="">
+        <a href="/">
           <img src="*" alt="" className="logoYellow_after" />
         </a>
       </div>
