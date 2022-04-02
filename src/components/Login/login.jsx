@@ -11,6 +11,7 @@ export const Login = () => {
     console.log("Login Success:", res.profileObj);
     setShowloginButton(false);
     setShowlogoutButton(true);
+    window.location.href = "/";
   };
 
   const onLoginFailure = (res) => {
@@ -69,7 +70,7 @@ export const Login = () => {
                 ></img>
               </div>
               <div className="h2">
-                <h3>Sign in with Google</h3>
+                <h3>Sign Out</h3>
               </div>
             </div>
           )}
