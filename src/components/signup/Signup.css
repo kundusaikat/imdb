@@ -1,0 +1,130 @@
+*{
+    font-family: Verdana, Arial, sans-serif;
+}
+
+.mdiv{
+    width: 66%;
+    height: 500px;
+    
+    display: flex;
+    margin: auto;
+}
+
+.ldiv{
+    width:40% ;
+    height: 100%;
+    
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+}
+.rdiv{
+    width:60% ;
+    height: 100%;
+    margin-left: 50px;
+    margin-top: 10px;
+    color: #333333;
+    
+}
+
+.signinmethod{
+    
+    width: 70%;
+    height: 40px;
+    margin: auto;
+    
+    display: flex;
+    gap: 12px;
+    text-align: center;
+    
+    align-items: center;
+    margin-bottom: 10px;
+    
+   border: 0.5px solid #555555;
+   border-radius: 5px;
+   color: #555555;
+   font-size: 13px;
+}
+
+.imgd{
+    width: 7%;
+    height: 50%;
+   
+   margin-left: 12%;
+
+}
+
+.imgd>img{
+    width: 100%;
+    height: 100%;
+
+}
+.or{
+    margin: auto;
+    align-items: center;
+}
+
+.btn{
+    background-color: rgb(218, 194, 62);
+    color: black;
+    font-weight: bold;
+    justify-content: center;
+    font-size: 17px;
+    border: none;
+}
+.btn:hover{
+    cursor: pointer;
+}
+
+#disc{
+    
+    font-size: 12px;
+    padding: 6px;
+    border: none;
+
+}
+.discription{
+    text-align: left;
+    padding-left: 23px;
+}
+
+.disription1>p{
+ margin-top: -15px;
+}
+.disription1{
+    font-size: 14px;
+}
+
+.nonborder{
+    border: none;
+}
+.first-heading{
+    font-size: 21px;
+}
+.line-span{
+    margin-bottom: 10px;
+}
+
+@media only screen and (min-width:0px) and(max-width:375px){
+    .signinmethod{
+    
+     
+       font-size: 5px;
+    }
+}
+
+@media only screen and (min-width:375px) and(max-width:768px){
+    .signinmethod{
+    
+     
+        font-size: 5px;
+     }
+}
+
+@media only screen and(min-width:768px){
+    .signinmethod{
+    
+     
+        font-size:5px;
+     }
+}
