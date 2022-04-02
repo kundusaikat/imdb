@@ -12,7 +12,7 @@ export const Signup = () => {
           <div className="signinmethod  ">
             {/* <div className="imgd"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL3i7lP_ywB0RjlG7VA7Ozg5Zt-BMduN_z48MyHJ0CzndsgRpbRqfJWwi4Bp47pSrhnBs&usqp=CAU" ></img></div>
                     <div className="h2"><h3>Sign in with Google</h3></div> */}
-            <div className="g-signin">{<Login></Login>}</div>
+            <div className="g-signin">{<Login />}</div>
           </div>
 
           <div className="signinmethod">

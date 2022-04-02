@@ -1,13 +1,16 @@
 *{
     font-family: Verdana, Arial, sans-serif;
+     color:white;
+    
 }
 
 .mdiv{
     width: 66%;
-    height: 500px;
+    height: 100vh;
     
     display: flex;
     margin: auto;
+   
 }
 
 .ldiv{
@@ -16,7 +19,19 @@
     
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+   
 
+}
+
+.ldiv > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    
+}
+
+.signinmethod{
+    height: auto;
 }
 .rdiv{
     width:60% ;
@@ -90,6 +105,7 @@
 
 .disription1>p{
  margin-top: -15px;
+ line-height: 40px;
 }
 .disription1{
     font-size: 14px;
@@ -100,6 +116,7 @@
 }
 .first-heading{
     font-size: 21px;
+    line-height: 30px;
 }
 .line-span{
     margin-bottom: 10px;
@@ -127,4 +144,8 @@
      
         font-size:5px;
      }
+}
+
+.h2>h3{
+    font-size: 50%;
 }

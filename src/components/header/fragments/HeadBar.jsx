@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { Debouns } from "./debouncing";
+import { Link } from "react-router-dom";
 
 export const HeadBar = ({ setToggle, image }) => {
   const [final, setFinal] = useState([]);
@@ -10,9 +11,9 @@ export const HeadBar = ({ setToggle, image }) => {
       axios
         .get(`https://omdbapi.com/?s=${value}&apikey=fdcffdb4&type=movie`)
         .then((res) => {
-          console.log(res.data);
+          // console.log(res.data);
           if (res.data.Response === "False") {
-            console.log("hi");
+            // console.log("hi");
             setFinal([]);
           } else {
             setFinal(res.data.Search);
@@ -64,7 +65,10 @@ export const HeadBar = ({ setToggle, image }) => {
           </div>
         </a>
         <div className="imdbBlack">
-          <p>Sign in</p>
+          <Link to="/signin" className="link">
+            {" "}
+            <p>Sign in</p>
+          </Link>
         </div>
         <div className="imdbBlack">
           <select name="" id="imdbBlack_option">

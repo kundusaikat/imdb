@@ -22,10 +22,13 @@ import "./Main.css";
 export const Main = () => {
   const [wl_data, setWl_data] = useState([]);
   useEffect(() => {
-    const arr = JSON.parse(localStorage.getItem("whish")) || [];
-    setWl_data([...arr]);
+    setTimeout(() => {
+      const arr = JSON.parse(localStorage.getItem("whish")) || [];
+      setWl_data([...arr]);
+    });
   }, [wl_data]);
 
+  // setInterval(() => {}, 1);
   // function remove_item() {}
 
   return (

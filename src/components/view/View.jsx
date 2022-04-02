@@ -12,21 +12,27 @@ export const View = () => {
     getView(Id1);
   }, [Id1]);
 
-  function getView(Id1) {
+  function getView(id) {
     axios
-      .get(`https://omdbapi.com/?i=${Id1}&apikey=fdcffdb4&type=movie&plot=full`)
+      .get(`https://omdbapi.com/?i=${id}&apikey=fdcffdb4&type=movie&plot=full`)
       .then(({ data }) => {
         setView(data);
       });
   }
 
   const [wl_data, setWl_data] = useState([]);
-  useEffect(() => {
-    const arr = JSON.parse(localStorage.getItem("whish"));
-    setWl_data([...arr]);
-  }, [wl_data]);
+  // useEffect(() => {
+  //   const arr = JSON.parse(localStorage.getItem("whish")) || [];
+  //   setWl_data([...arr]);
+  // }, [wl_data]);
 
-  console.log(view);
+  useEffect(() => {
+    setTimeout(() => {
+      const arr = JSON.parse(localStorage.getItem("whish"));
+      setWl_data([...arr]);
+    });
+  }, [wl_data]);
+  // console.log(view);
   return (
     <>
       <Header />
@@ -124,7 +130,7 @@ export const View = () => {
               <div className="link_wl">
                 <button
                   onClick={() => {
-                    setId(e.imdbID);
+                    setId1(e.imdbID);
                   }}
                 >
                   View

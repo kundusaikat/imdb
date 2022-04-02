@@ -69,12 +69,14 @@ img {
 .borntoday > .flexContainer {
   display: flex;
   flex-direction: row;
+
 }
 
 .borntoday > .flexContainer > div {
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: 70vw;
 }
 
 .borntoday > .flexContainer > div > .imgContainer {

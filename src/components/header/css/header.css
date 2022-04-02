@@ -70,11 +70,14 @@ a {
 #movie_header {
   background-color: white;
   margin-top: 3px;
+  color:black;
+  
 }
 #searchInput {
   margin-left: 1%;
   width: 90%;
   border: transparent;
+  color:black;
 }
 #searchInput:focus {
   outline: none;
@@ -160,7 +163,7 @@ a {
   background-color: black;
   width: 40%;
   position: absolute;
-  z-index: 30px;
+  z-index: 2;
   transition: 1s;
   margin-left: 25.29%;
   height: 50px;
@@ -182,4 +185,8 @@ a {
     justify-content: space-between;
     color: white;
   }
+}
+
+.link{
+  text-decoration: none;
 }
