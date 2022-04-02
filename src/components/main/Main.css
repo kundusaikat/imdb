@@ -171,6 +171,7 @@ img{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 30px;
 }
 
 .icons >a > *{
@@ -181,6 +182,9 @@ img{
     text-decoration: none;
     color:white;
     
+}
+ul{
+    margin-bottom: 30px;
 }
 
 ul.flex{
@@ -193,18 +197,22 @@ ul.flex{
 }
 
 p.amazon{
+    margin: 30px;
     width: 200px;
     margin: auto ;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    overflow: auto;
 }
 
 p.amazon > img{
-    height: 30px;
+    
+    height: 20px;
     width: auto;
 }
 
 p.lastline {
+    margin-top:10px;
     text-align: center;
 }
