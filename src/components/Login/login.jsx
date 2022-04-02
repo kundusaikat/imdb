@@ -30,10 +30,20 @@ export const Login = () => {
         <GoogleLogin
           clientId={clientId}
           render={(renderProps) => (
-            <div className="logindiv" onClick={renderProps.onClick} disabled={renderProps.disabled}>
-             <div className="imgd"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL3i7lP_ywB0RjlG7VA7Ozg5Zt-BMduN_z48MyHJ0CzndsgRpbRqfJWwi4Bp47pSrhnBs&usqp=CAU" ></img></div>
-                    <div className="h2"><h3>Sign in with Google</h3></div>
-              
+            <div
+              className="logindiv"
+              onClick={renderProps.onClick}
+              disabled={renderProps.disabled}
+            >
+              <div className="imgd">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL3i7lP_ywB0RjlG7VA7Ozg5Zt-BMduN_z48MyHJ0CzndsgRpbRqfJWwi4Bp47pSrhnBs&usqp=CAU"
+                  alt=""
+                ></img>
+              </div>
+              <div className="h2">
+                <h3>Sign in with Google</h3>
+              </div>
             </div>
           )}
           buttonText="Login"
@@ -47,10 +57,20 @@ export const Login = () => {
         <GoogleLogout
           clientId={clientId}
           render={(renderProps) => (
-            <div className="logindiv" onClick={renderProps.onClick} disabled={renderProps.disabled}>
-             <div className="imgd"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL3i7lP_ywB0RjlG7VA7Ozg5Zt-BMduN_z48MyHJ0CzndsgRpbRqfJWwi4Bp47pSrhnBs&usqp=CAU" ></img></div>
-                    <div className="h2"><h3>Sign in with Google</h3></div>
-              
+            <div
+              className="logindiv"
+              onClick={renderProps.onClick}
+              disabled={renderProps.disabled}
+            >
+              <div className="imgd">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL3i7lP_ywB0RjlG7VA7Ozg5Zt-BMduN_z48MyHJ0CzndsgRpbRqfJWwi4Bp47pSrhnBs&usqp=CAU"
+                  alt=""
+                ></img>
+              </div>
+              <div className="h2">
+                <h3>Sign in with Google</h3>
+              </div>
             </div>
           )}
           buttonText="Sign Out"
