@@ -38,8 +38,7 @@ a {
 
 .mainContainer {
   margin: auto;
-  /* border: 1px solid green; */
-  /* height: ; */
+
   display: flex;
   flex-direction: row;
   background-color: transparent;
@@ -73,12 +72,17 @@ a {
   margin-top: 0.5%;
   background-color: white;
 }
-#movie {
+#movie_header {
   background-color: white;
+  margin-top: 3px;
 }
 #searchInput {
   margin-left: 1%;
   width: 90%;
+  border: transparent;
+}
+#searchInput:focus {
+  outline: none;
 }
 #after {
   display: none;
@@ -159,12 +163,17 @@ a {
 }
 .debounce_table {
   /* border: 1px solid white; */
-  position: relative;
+  position: absolute;
   z-index: 30px;
   transition: 1s;
   margin-left: 25.29%;
+  height: 50px;
 }
-
+#wl_a {
+  text-decoration: none;
+  background-color: transparent;
+  margin-top: 10px;
+}
 
 @media only screen and (max-width: 600px) {
   .mainContainer {
