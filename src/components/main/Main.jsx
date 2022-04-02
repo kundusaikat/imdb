@@ -23,7 +23,7 @@ import "./Main.css";
 export const Main = () => {
   const [wl_data, setWl_data] = useState([]);
   useEffect(() => {
-    const arr = JSON.parse(localStorage.getItem("whish"));
+    const arr = JSON.parse(localStorage.getItem("whish")) || [];
     setWl_data([...arr]);
   }, [wl_data]);
 
