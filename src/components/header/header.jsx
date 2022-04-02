@@ -1,7 +1,7 @@
 import image from "../../images/imdbYellow.png";
 import { Menu } from "./fragments/Menu";
 import { HeadBar } from "./fragments/HeadBar";
-import { After_head } from "./fragments/after_Header";
+import { After_head } from "./fragments/After_head";
 
 import "./css/header.css";
 import "./css/menu.css";
