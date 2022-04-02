@@ -1,11 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faYoutube,
-  faInstagram,
-  faTwitch,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   topPicks,
   watchlistData,
@@ -19,6 +13,14 @@ import {
 import "./Main.css";
 
 export const Main = () => {
+  const [wl_data, setWl_data] = useState([]);
+  useEffect(() => {
+    const arr = JSON.parse(localStorage.getItem("whish"));
+    setWl_data([...arr]);
+  }, [wl_data]);
+
+  // function remove_item() {}
+
   return (
     <div className="main">
       {/* Featured today */}
@@ -41,7 +43,10 @@ export const Main = () => {
         <h1>What to watch</h1>
         <div className="subdiv toppicks">
           <h2 className="heading">Top picks</h2>
-          <p>TV shows and movies just for you</p>
+          <p style={{ marginBottom: "8px" }}>
+            TV shows and movies just for you
+          </p>
+
           <div className="flexContainer">
             {topPicks.map((e) => (
               <div className="wrapper" key={e.title}>
@@ -56,24 +61,53 @@ export const Main = () => {
         </div>
 
         <div className="subdiv toppicks">
-          <h2 className="heading">From your Watchlist</h2>
-          <p>Movies and TV shows that you have watchlisted</p>
+          <h2 className="heading" style={{ marginTop: "80px" }}>
+            From your Watchlist
+          </h2>
+          <p style={{ marginBottom: "8px" }}>
+            Movies and TV shows that you have watchlisted
+          </p>
           <div className="flexContainer" id="wl">
-            {watchlistData.map((e) => (
-              <div className="wrapper" key={e.title}>
-                <div className="imgContainer">
-                  <img src={e.imgUrl} alt="" />
+            {wl_data.map((e, i) => (
+              <div className="wrapper" key={e.imdbID}>
+                <div className="button_container">
+                  <button
+                    className="remove_wl"
+                    onClick={() => {
+                      let temp = [...wl_data];
+                      temp.splice(i, 1);
+                      localStorage.setItem("whish", JSON.stringify(temp));
+                      setWl_data([...temp]);
+                    }}
+                  >
+                    Remove
+                  </button>
+                  <Link className="link_wl" to={`/movie/${e.imdbID}`}>
+                    <button>View</button>
+                  </Link>
                 </div>
-                <p>{e.rating}</p>
-                <p>{e.title}</p>
+                <div className="imgContainer" style={{ height: "220px" }}>
+                  <img
+                    src={
+                      e.Poster === "N/A"
+                        ? "https://freepikpsd.com/file/2019/10/image-not-found-png-4-Transparent-Images.png"
+                        : e.Poster
+                    }
+                    alt=""
+                  />
+                </div>
+                <p>7.5</p>
+                <p>{e.Title}</p>
               </div>
             ))}
           </div>
         </div>
 
         <div className="subdiv toppicks">
-          <h2 className="heading">Fan favourites</h2>
-          <p>This week's top TV and Movies</p>
+          <h2 className="heading" style={{ marginTop: "80px" }}>
+            Fan favourites
+          </h2>
+          <p style={{ marginBottom: "8px" }}>This week's top TV and Movies</p>
           <div className="flexContainer">
             {fanFavourites.map((e) => (
               <div className="wrapper" key={e.title}>
@@ -87,11 +121,10 @@ export const Main = () => {
           </div>
         </div>
 
-        <div className="subdiv moreToWatch">
-          <h2 className="heading">More to watch</h2>
-          <p>IMDb helps you select this perfect next show or movie to watch</p>
-          <button>Watch Guide</button>
-          <button>Most Popular</button>
+        <div className="subdiv">
+          <h2 className="heading" style={{ marginTop: "80px" }}>
+            More to watch
+          </h2>
         </div>
       </div>
 
@@ -168,7 +201,9 @@ export const Main = () => {
         <h1>More to explore</h1>
 
         <div className="subdiv">
-          <h2 className="heading">Editor's pick</h2>
+          <h2 className="heading" style={{ marginTop: "20px" }}>
+            Editor's pick
+          </h2>
           <div className="editor_flex">
             {editorsPick.map((e) => (
               <div className="editorsPick" key={e.title}>
