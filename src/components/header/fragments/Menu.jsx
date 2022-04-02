@@ -5,7 +5,12 @@ export const Menu = ({ setToggle }) => {
       <div className="before">
         <div className="row_1">
           <div className="colum_head_left">
-            <img src={image} alt="" />
+            <img
+              src={image}
+              alt=""
+              id="imdb_image"
+              style={{ height: "60px" }}
+            />
           </div>
           <div className="colum_head_right">
             <button
@@ -119,7 +124,6 @@ export const Menu = ({ setToggle }) => {
           </div>
         </div>
       </div>
-      <div className="after"></div>
     </>
   );
 };
