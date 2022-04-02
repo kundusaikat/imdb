@@ -10,7 +10,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import {
   topPicks,
-  watchlistData,
   fanFavourites,
   borntoday,
   editorsPick,
