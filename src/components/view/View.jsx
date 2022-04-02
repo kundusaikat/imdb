@@ -2,7 +2,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Header } from "../header/Header";
-import { Link } from "react-router-dom";
 import "./view.css";
 
 export const View = () => {
@@ -12,6 +11,7 @@ export const View = () => {
   useEffect(() => {
     getView();
   }, [Id]);
+
   function getView() {
     axios
       .get(`https://omdbapi.com/?i=${Id}&apikey=fdcffdb4&type=movie&plot=full`)
