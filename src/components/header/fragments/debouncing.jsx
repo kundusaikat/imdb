@@ -2,8 +2,9 @@ import "../css/debounce.css";
 export const Debouns = ({ e }) => {
   const setItem = (input) => {
     let arr = JSON.parse(localStorage.getItem("whish")) || [];
-    let arr_1=[...arr,e];
-    localStorage.setItem("whish",JSON.stringify(arr_1))
+    let arr_1 = [...arr, e];
+    localStorage.setItem("whish", JSON.stringify(arr_1));
+    // window.location.reload(true);
   };
   return (
     <>
